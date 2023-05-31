@@ -6,12 +6,13 @@ import css from './FeedbackOptions.module.css'
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <>
-      {options.map(option => (
-          <button className={css.button}
+      {options.map((option) => (
+        <button
+          className={css.button}
           key={shortid.generate()}
           type="button"
           name={option}
-          onClick={onLeaveFeedback}
+          onClick={() => onLeaveFeedback(option)}
         >
           {option}
         </button>
